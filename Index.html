@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/CSS/Style.css">
+  </head>
+  <body>
+    <h1>Calculadora de Sistema de Ecuaciones</h1>
+    <h2>Metodo Gauss Jordan</h2>
+    <h3>Matriz 3x4</h3>
+    <button id="Restablecer" type="button" style="display: none;" onclick="location.reload();">Restablecer</button>
+    <button id="buttonGenerarMatriz" onclick="generarMatriz()">Generar Matriz</button>
+
+    <div id="matrizContainer" style="display: none;">
+      <h3>Matriz Aumentada</h3>
+      <table id="tablaMatriz" border="1">
+          <tbody> 
+            <tr>
+              <td> <input type="number" value="1"></td>
+              <td> <input type="number" value="-1"></td>
+              <td> <input type="number" value="3"></td>
+              <td> <input type="number" value="13"></td>
+            </tr>
+            <tr>
+              <td> <input type="number" value="1"></td>
+              <td> <input type="number" value="1"></td>
+              <td> <input type="number" value="1"></td>
+              <td> <input type="number" value="11"></td>
+            </tr>
+            <tr>
+              <td> <input type="number" value="2"></td>
+              <td> <input type="number" value="2"></td>
+              <td> <input type="number" value="-1"></td>
+              <td> <input type="number" value="7"></td>
+            </tr>
+          </tbody>
+      </table>
+
+      <button id="recopilarMatrizButton" onclick="recopilarMatriz()">Resultado</button>
+    </div>
+
+    <div class="solution">
+      <p id="output"></p>
+    </div>
+
+    <script src="/Gauss-Jordan-main/ScriptGauss.js"></script>
+    <script src="/Cramer/ScriptCramer.js"></script>
+  </body>
+</html>
