@@ -6,9 +6,8 @@ body {
 }
 
 button {
-  margin-top: 10px;
   padding: 8px 15px;
-  background-color: #007bff;
+  background-color: #3AC2FC;
   color: white;
   border: none;
   border-radius: 4px;
@@ -16,22 +15,10 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #2b90bb;
 }
 
-.solution {
-  margin-top: 20px;
-  font-size: 1.2em;
-  padding: 10px;
-  background-color: #e9ecef;
-  border-radius: 4px;
-}
 
-table td {
-  width: 50px;
-  height: 50px;
-  border: greenyellow;
-}
 
 input {
   width: 50px;
@@ -40,30 +27,86 @@ input {
 }
 
 /*Principal*/
-.ContenedorMetodos {
+
+li {
+  list-style-type: none
+}
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-}
-
-.ContenedorCartas {
-  display: flex;
-  align-items: flex-start;
-}
-
-.Cartas {
-  width: 450px;
-  height: 400px;
+  background-color: #5C67FF;
   padding: 10px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: antiquewhite;
-  color: #000000;
+  border: 2px solid white;
 }
 
-.Cartas p {
-  background-color: #ffffff;
+.subHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #B1B6FF;
+  padding: 10px;
+  margin: 0px 0px 5px 0px;
+  border: 2px solid white;
+}
+
+.contentGlobal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerOperacion {
+  width: 1000px;
+  display: flex;
+  background-color: #5C67FF;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   
+  box-sizing: border-box;
+  justify-content: space-between;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 2px solid white;
+}
+
+input {
+  width: 30px;
+  height: 20px;
+}
+
+#metodos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Solucion {
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #B1B6FF;
+  border: 2px solid white;
+  border-top: 0px;
+}
+
+.contentMatriz {
+  display: flex;
+  background-color: #77B5CD;
+  height: 500px;
+  border: 2px solid white;
+  border-top: 0px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentMatriz h2, .pasos h3 {
+  margin: 0px;
+  padding: 10px;
+}
+
+.pasos {
+  background-color: #011d4b;
+  border: 2px solid white;
+  border-top: 0px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
