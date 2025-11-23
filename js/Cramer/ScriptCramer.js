@@ -12,15 +12,6 @@ function cramer(){
   document.getElementById("output").innerHTML = ""
 }
 
-function botonGuardarf() {
-  if (botonGuardar) {
-    const metodosh2 = document.getElementById("metodosh2").textContent.trim()
-    if (metodosh2 === "Cramer") {
-      guardarMatriz()
-    }
-  }
-}
-
 function guardarMatriz() {
   const NumFilas = parseInt(document.getElementById("filasInput").value)
   const NumColumnas = parseInt(document.getElementById("columnasInput").value)
@@ -76,7 +67,5 @@ function guardarMatriz() {
   const y = detAy / detA
   const z = detAz / detA
 
-  document.getElementById("output").innerHTML = 
-    `Solucion:<br>` +
-    `x = ${x}<br>y = ${y}<br>z = ${z}`
+  document.getElementById("output").innerHTML = `Solucion:<br>` + `x = ${x}<br>y = ${y}<br>z = ${z}`
 }
