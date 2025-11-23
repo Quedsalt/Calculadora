@@ -25,8 +25,8 @@
       <div class="herramientas">
         <h2>Herramientas</h2>
         <ul>
-          <li><h3>Gauss Jordan</h3></li>
-          <li><h3>Cramer</h3></li>
+          <li><a href="#" onclick="GaussJordan()"><h3>Gauss Jordan</h3></a></li>
+          <li><a href="#" onclick="cramer()"><h3>Cramer</h3></a></li>
           <li><h3>3</h3></li>
           <li><h3>4</h3></li>
           <li><h3>5</h3></li>
@@ -34,7 +34,7 @@
         </ul>
       </div>
       <div>
-        <div id="metodos"><H2>Cramer</H2></div>
+        <div id="metodos"><H2 id="metodosh2">Cramer</H2></div>
         <div class="headerOperacion">
           <button onclick="mostrarMatriz()">Generar</button>
           <table>
@@ -50,7 +50,7 @@
             <h2>Matriz</h2>
             <div id="contenedorMatriz"></div>
           </div>
-          <div id="GuardarMatriz"><button id="GuardarBoton">Guardar</button></div>
+          <div id="GuardarMatriz"><button id="GuardarBoton" onclick="botonGuardarf()">Guardar</button></div>
         </div>
         <div>
           <div class="Solucion">
@@ -74,7 +74,8 @@
         </ul>
       </div>
     </div>
-    <script src="/Gauss-Jordan-main/ScriptGauss.js"></script>
-    <script src="/Cramer/ScriptCramer.js"></script>
+    <script src="/js/Gauss-Jordan-main/ScriptGauss.js"></script>
+    <script src="/js/Cramer/ScriptCramer.js"></script>
+    <script src="/js/Matriz/generadorMatrices.js"></script>
   </body>
 </html>
