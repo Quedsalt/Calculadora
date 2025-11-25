@@ -25,7 +25,7 @@ function arraysIguales(arr1, arr2) {
 
 function GaussJordan(){
     document.getElementById("metodosh2").innerHTML = "Gauss Jordan"
-    document.getElementById("output").innerHTML = ""
+    subHeaderStyle()
 }
 
 function resultado() {

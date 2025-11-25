@@ -7,9 +7,7 @@ const botonGuardar = contenedorGuardar.querySelector("button")
 
 function cramer(){
   document.getElementById("metodosh2").innerHTML = "Cramer"
-  contenedorPrincipal.innerHTML = ""
-  contenedorGuardar.style.display = "none"
-  document.getElementById("output").innerHTML = ""
+  subHeaderStyle()
 }
 
 function guardarMatriz() {
