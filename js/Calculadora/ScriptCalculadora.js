@@ -22,5 +22,7 @@ function llamarCalculadora() {
 
     const H2MatrizContent = document.getElementById("H2MatrizContent")
     H2MatrizContent.style.display = "none"
+    const contentMatriz = document.getElementById("contentMatriz")
+    contentMatriz.style.justifyContent = "center"
 
 }
