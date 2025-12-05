@@ -10,6 +10,7 @@
     <header>
       <div class="logo">Logo</div>
       <h1>Calculadora</h1>
+      <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
     </header>
     <nav class="subHeader">
       <ul>
@@ -49,45 +50,33 @@
           </div>
           <div id="GuardarMatriz"><button id="GuardarBoton">Guardar</button></div>
           <!--Estructura de la calculadora-->
-          <div id="Calculadora">
-            <div>
-              <div class="Pantalla"></div>
-            </div>
-            <div class="Botones">
-              <table class="tablaBotones">
-                <tr>
-                  <td><button class="simbolos" aria-label="Simbolo (">(</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo )">)</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo %">%</button></td>
-                  <td><button class="simbolos" aria-label="Clear Entry">CE</button></td>
-                </tr>
-                <tr>
-                  <td><button class="numeros"  aria-label="numero 7">7</button></td>
-                  <td><button class="numeros"  aria-label="numero 8">8</button></td>
-                  <td><button class="numeros"  aria-label="numero 9">9</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo dividir">/</button></td>
-                </tr>
-                <tr>
-                  <td><button class="numeros"  aria-label="numero 4">4</button></td>
-                  <td><button class="numeros"  aria-label="numero 5">5</button></td>
-                  <td><button class="numeros"  aria-label="numero 6">6</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo multiplicar">x</button></td>
-                </tr>
-                <tr>
-                  <td><button class="numeros"  aria-label="numero 1">1</button></td>
-                  <td><button class="numeros"  aria-label="numero 2">2</button></td>
-                  <td><button class="numeros"  aria-label="numero 3">3</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo menos">-</button></td>
-                </tr>
-                <tr>
-                  <td><button class="numeros"  aria-label="numero 0">0</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo .">.</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo =">=</button></td>
-                  <td><button class="simbolos" aria-label="Simbolo +">+</button></td>
-                </tr>
-              </table> 
-            </div>
-          </div>
+          <section class="calculadora">
+            <input type="text" id="display" disabled>
+
+            <button id="ac" class="button operadores">AC</button>
+            <button id="de" class="button operadores">DE</button>
+            <button id="." class="button operadores">.</button>
+            <button id="/" class="button operadores">/</button>
+
+            <button id="7" class="button">7</button>
+            <button id="8" class="button">8</button>
+            <button id="9" class="button">9</button>
+            <button id="*" class="button operadores">*</button>
+
+            <button id="4" class="button">4</button>
+            <button id="5" class="button">5</button>
+            <button id="6" class="button">6</button>
+            <button id="-" class="button operadores">-</button>
+
+            <button id="1" class="button">1</button>
+            <button id="2" class="button">2</button>
+            <button id="3" class="button">3</button>
+            <button id="+" class="button operadores">+</button>
+
+            <button id="00" class="button">00</button>
+            <button id="0" class="button">0</button>
+            <button id="=" class="equal button operadores">=</button>
+          </section>
         </section>
         <!--Soluciones creadas desde archivos .js-->
         <section>
