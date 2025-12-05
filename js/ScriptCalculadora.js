@@ -20,5 +20,21 @@ function llamarCalculadora() {
     H2MatrizContent.style.display = "none"
     const contentMatriz = document.querySelector(".contentMatriz")
     contentMatriz.style.justifyContent = "center"
-
 }
+
+const display = document.querySelector("#display")
+const botonesC = document.querySelectorAll(".button")
+
+botonesC.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if(btn.id === "="){
+        display.value = eval(display.value)
+    }else if(btn.id === "ac"){
+        display.value = ""
+    } else if(btn.id === "de"){
+        display.value = display.value.slice(0, -1)
+    }else {
+        display.value += btn.id
+    }
+  })
+})
