@@ -44,6 +44,7 @@ function botonGuardarF() {
   }
 }
 
+//Actualiza el diseño de la pagina
 function subHeaderStyle(){
   contenedorPrincipal.innerHTML = ""
   contenedorGuardar.style.display = "none"
@@ -63,6 +64,7 @@ function subHeaderStyle(){
   contentMatriz.style.justifyContent = "flex-start"
 }
 
+//Llama los metodos
 const botones = document.querySelectorAll(".boton-operacion")
 
 botones.forEach(boton => {
@@ -85,17 +87,18 @@ botones.forEach(boton => {
   })
 })
 
-const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
+// Estilos de la pagina Noche/Dia
+const themeToggle = document.getElementById('theme-toggle')
+  const body = document.body
 
   // Ver si el usuario ya tiene una preferencia guardada
-  const savedTheme = localStorage.getItem('theme') || 'night';
+  const savedTheme = localStorage.getItem('theme') || 'night'
   if (savedTheme === 'day') {
-    body.classList.add('day-theme');
+    body.classList.add('day-theme')
   }
 
   themeToggle.addEventListener('click', () => {
-    body.classList.toggle('day-theme');
-    const currentTheme = body.classList.contains('day-theme') ? 'day' : 'night';
-    localStorage.setItem('theme', currentTheme);
-  });
+    body.classList.toggle('day-theme')
+    const currentTheme = body.classList.contains('day-theme') ? 'day' : 'night'
+    localStorage.setItem('theme', currentTheme)
+  })
