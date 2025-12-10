@@ -17,6 +17,8 @@
         <li><a class="boton-operacion" href="#" role="button" data-metodo="calculadora">Calculadora</a></li>
         <li><a class="boton-operacion" href="#" role="button" data-metodo="gauss">Gauss Jordan</a></li>
         <li><a class="boton-operacion" href="#" role="button" data-metodo="cramer">Cramer</a></li>
+        <li><a class="boton-operacion" href="#" role="button" data-metodo="ProductoCruz">ProductoCruz</a></li>
+        <li><a class="boton-operacion" href="#" role="button" data-metodo="Grafica3D">Grafica3D</a></li>
       </ul>
     </nav>
     <main class="contentGlobal">
@@ -27,6 +29,8 @@
           <li><a class="boton-operacion" href="#" role="button" data-metodo="calculadora">Calculadora</a></li>
           <li><a class="boton-operacion" href="#" role="button" data-metodo="gauss">Gauss Jordan</a></li>
           <li><a class="boton-operacion" href="#" role="button" data-metodo="cramer">Cramer</a></li>
+          <li><a class="boton-operacion" href="#" role="button" data-metodo="ProductoCruz">ProductoCruz</a></li>
+          <li><a class="boton-operacion" href="#" role="button" data-metodo="Grafica3D">Grafica3D</a></li>
         </ul>
       </nav>
       <!--Customizacion de las matrices-->
@@ -77,6 +81,23 @@
             <button id="0" class="button">0</button>
             <button id="=" class="equal button operadores">=</button>
           </section>
+          <!--Vectores  -->
+          <canvas id="canvas3D"></canvas>
+          <section class="productoCruz">
+            <div>
+              <h3>Vector 1: (x, y, z)</h3>
+              <input type="number" id="v1x" value="0"> 
+              <input type="number" id="v1y" value="0"> 
+              <input type="number" id="v1z" value="0">
+            </div>
+            <div>
+              <h3>Vector 2: (x, y, z)</h3>
+              <input type="number" id="v2x" value="0"> 
+              <input type="number" id="v2y" value="0"> 
+              <input type="number" id="v2z" value="0">
+            </div>
+            <button class="calcular" onclick="calcularProductoCruz()">Calcular</button>
+          </section>
         </section>
         <!--Soluciones creadas desde archivos .js-->
         <section>
@@ -104,6 +125,8 @@
     <script src="/js/ScriptCramer.js"></script>
     <script src="/js/ScriptGauss.js"></script>
     <script src="/js/ScriptCalculadora.js"></script>
+    <script src="/js/productoCruz.js"></script>
+    <script src="/js/grafica3D.js"></script>
     <script src="/js/global.js"></script>
   </body>
 </html>
