@@ -52,20 +52,29 @@ function subHeaderStyle(){
   contenedorGuardar.style.display = "none"
   document.getElementById("output").innerHTML = ""
   document.getElementById("h2TopOperarcion").innerHTML = "Matriz"
+  //Muestra el boton y tabla de matriz
   const BotonGenerar = document.getElementById("botonGenerar")
   const TablaGMatriz = document.getElementById("tablaGMatriz")
   BotonGenerar.style.display = "block"
   TablaGMatriz.style.display = "block"
   const headerOperacion = document.getElementById("headerOperacion")
   headerOperacion.style.justifyContent = "space-between"
+  //Muestra el contenido de matrices
   const H2MatrizContent = document.getElementById("H2MatrizContent")
   H2MatrizContent.style.display = "block"
+  //Oculta Calculadora
   const MostrarCalculadora = document.querySelector(".calculadora")
   MostrarCalculadora.style.display = "none"
   const contentMatriz = document.querySelector(".contentMatriz")
   contentMatriz.style.justifyContent = "flex-start"
+  //Ocuta Producto Cruz
   const ProdtCruz = document.querySelector(".productoCruz")
   ProdtCruz.style.display = "none"
+  //Oculta Grafica
+  const canvas = document.getElementById("canvas3D")
+    if (canvas) {
+    canvas.style.display = "none"
+  }
 }
 
 function OcultarMatrices(){

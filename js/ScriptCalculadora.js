@@ -9,6 +9,11 @@ function llamarCalculadora() {
     //Oculta el producto cruz
     const ProdtCruz = document.querySelector(".productoCruz")
     ProdtCruz.style.display = "none"
+    //Oculta Grafica
+    const canvas = document.getElementById("canvas3D")
+    if (canvas) {
+        canvas.style.display = "none"
+    }
 }
 
 const display = document.querySelector("#display")

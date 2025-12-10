@@ -9,6 +9,12 @@ function llamarProductoCruz() {
     //Oculta la calculadora
     const MostrarCalculadora = document.querySelector(".calculadora")
     MostrarCalculadora.style.display = "none"
+
+    //Oculta Grafica
+    const canvas = document.getElementById("canvas3D")
+    if (canvas) {
+        canvas.style.display = "none"
+    }
 }
 
 function calcularProductoCruz() {
