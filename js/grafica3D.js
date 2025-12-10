@@ -35,14 +35,14 @@ function dibujarGrafica3D(v1, v2) {
   const rootStyle = getComputedStyle(document.documentElement)
   const textColor = rootStyle.getPropertyValue('--text-color').trim()
   const axisColor = rootStyle.getPropertyValue('--border-color').trim()
-  const xColor = "#ff6b6b"
-  const yColor = "#4ecdc4"
-  const zColor = "#45b7d1"
+  const xColor = "#ff0000ff"
+  const yColor = "#1eff00ff"
+  const zColor = "#008cffff"
   const vector1Color = "#ffa500"
   const vector2Color = "#9c27b0"
 
   // Limpiar canvas con fondo del tema
-  ctx.fillStyle = rootStyle.getPropertyValue('--bg-card').trim()
+  ctx.fillStyle = "#cfcfcfff"
   ctx.fillRect(0, 0, width, height)
 
   // Origen en el centro
