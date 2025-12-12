@@ -15,10 +15,8 @@ function llamarGrafica3D() {
     if (ProdtCruz) ProdtCruz.style.display = "flex"
     // Mostrar canvas
     const canvas = document.getElementById("canvas3D")
-    if (canvas) {
-        canvas.style.display = "block"
-        actualizarGrafica()
-    }
+    canvas.style.display = "block"
+    actualizarGrafica()
 }
 
 function dibujarGrafica3D(v1, v2) {
@@ -33,8 +31,7 @@ function dibujarGrafica3D(v1, v2) {
 
   // Obtener colores del tema actual
   const rootStyle = getComputedStyle(document.documentElement)
-  const textColor = rootStyle.getPropertyValue('--text-color').trim()
-  const axisColor = rootStyle.getPropertyValue('--border-color').trim()
+  const axisColor = rootStyle.getPropertyValue('black').trim()
   const xColor = "#ff0000ff"
   const yColor = "#1eff00ff"
   const zColor = "#008cffff"

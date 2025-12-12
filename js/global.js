@@ -1,3 +1,18 @@
+let subMenu = document.querySelector(".submenu")
+let openSubMenu = document.querySelector(".open_submenu")
+
+openSubMenu.addEventListener("click", function(){
+  subMenu.classList.toggle('show')
+})
+
+document.addEventListener("click", function(e){
+  if(subMenu.classList.contains('show')
+  && !subMenu.contains(e.target)
+  && !openSubMenu.contains(e.target)){
+    subMenu.classList.remove('show')
+  }
+})
+//Mostrar matriz
 document.getElementById("botonGenerar").addEventListener("click", mostrarMatriz)
 document.getElementById('GuardarBoton').addEventListener('click', () => {
   botonGuardarF()
@@ -107,10 +122,10 @@ botones.forEach(boton => {
     switch(metodo) {
       case "calculadora":
         llamarCalculadora()
-        break;
+        break
       case "gauss":
         GaussJordan()
-        break;
+        break
       case "cramer":
         cramer()
         break
@@ -126,53 +141,71 @@ botones.forEach(boton => {
 
 // Estilos de la pagina Noche/Dia
 
-// Referencias a los elementos del DOM
 const themeToggleBtn = document.getElementById('theme-toggle')
 const modeToggleCheckbox = document.getElementById('modeToggle')
 const body = document.body
 
-// 1. Lógica para establecer el tema inicial
 function setInitialTheme() {
     const savedTheme = localStorage.getItem('theme')
     
     if (savedTheme) {
-        // Si hay un tema guardado, aplicarlo
         if (savedTheme === 'day') {
             body.classList.add('day-theme')
-            modeToggleCheckbox.checked = true; // Sincroniza el checkbox al estado 'checked' (día)
+            modeToggleCheckbox.checked = true
         } else {
-            // Si savedTheme es 'night' o cualquier otro valor, asegura que no tenga day-theme
             body.classList.remove('day-theme')
-            modeToggleCheckbox.checked = false // Sincroniza el checkbox al estado 'unchecked' (noche)
+            modeToggleCheckbox.checked = false
         }
     } else {
-        // Si no hay tema guardado en localStorage, detecta la preferencia del sistema
         const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
 
         if (!prefersDarkMode) {
-            // Si el sistema prefiere CLARO (Día), aplica el tema de día
             body.classList.add('day-theme')
-            modeToggleCheckbox.checked = true // Sincroniza el checkbox
-            localStorage.setItem('theme', 'day') // Guarda la preferencia del sistema para futuras visitas
+            modeToggleCheckbox.checked = true
+            localStorage.setItem('theme', 'day')
         } else {
-            // Si el sistema prefiere OSCURO (Noche), aplica el tema de noche
+
             body.classList.remove('day-theme')
-            modeToggleCheckbox.checked = false // Sincroniza el checkbox
-            localStorage.setItem('theme', 'night') // Guarda la preferencia del sistema
+            modeToggleCheckbox.checked = false
+            localStorage.setItem('theme', 'night')
         }
     }
 }
 
-// 2. Lógica para cambiar el tema al hacer clic en el toggle
 themeToggleBtn.addEventListener('click', () => {
-    // Esto lo dispara el click en el div.toggle--btn
     body.classList.toggle('day-theme')
-  
 
-    // Guardar la nueva preferencia en localStorage
     const currentTheme = body.classList.contains('day-theme') ? 'day' : 'night'
     localStorage.setItem('theme', currentTheme)
-});
+})
 
-// Ejecutar la función inicial al cargar la página
-document.addEventListener('DOMContentLoaded', setInitialTheme)
+//Oculta la opcion de generar la grafica 3D y la graifica3D
+
+const mediaQuery = window.matchMedia('(max-width: 900px)')
+
+function handleTabletChange(e) {
+  const canvasById = document.getElementById('canvas3D')
+  const elementsWithClass = document.querySelectorAll('.canvas3D')
+
+  if (e.matches) {
+    GaussJordan()
+
+    if (canvasById) {
+      // Usamos setProperty para forzar !important en el ID
+      canvasById.style.setProperty('display', 'none', 'important')
+    }
+
+    elementsWithClass.forEach(el => {
+        el.style.setProperty('display', 'none', 'important')
+    })
+
+  } else {
+    if (canvasById) {
+      canvasById.style.setProperty('display', 'block', 'important')
+    }
+  }
+}
+
+mediaQuery.addEventListener('change', handleTabletChange)
+
+handleTabletChange(mediaQuery)
