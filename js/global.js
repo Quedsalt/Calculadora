@@ -90,6 +90,7 @@ function subHeaderStyle(){
     if (canvas) {
     canvas.style.display = "none"
   }
+  if (contentMatriz) contentMatriz.style.height = "500px"
 }
 
 function OcultarMatrices(){
@@ -179,6 +180,11 @@ themeToggleBtn.addEventListener('click', () => {
     localStorage.setItem('theme', currentTheme)
 })
 
+//boton dia/noche
+const swith = document.querySelector(".switch")
+swith.addEventListener("click", e => {
+  swith.classList.toggle("active")
+})
 //Oculta la opcion de generar la grafica 3D y la graifica3D
 
 const mediaQuery = window.matchMedia('(max-width: 900px)')
@@ -198,11 +204,10 @@ function handleTabletChange(e) {
     elementsWithClass.forEach(el => {
         el.style.setProperty('display', 'none', 'important')
     })
-
-  } else {
-    if (canvasById) {
-      canvasById.style.setProperty('display', 'block', 'important')
-    }
+  }else {
+    elementsWithClass.forEach(el => {
+        el.style.setProperty('display', 'block', 'important')
+    })
   }
 }
 
