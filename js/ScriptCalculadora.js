@@ -4,6 +4,7 @@ function llamarCalculadora() {
     const MostrarCalculadora = document.querySelector(".calculadora")
     MostrarCalculadora.style.display = "grid"
     const contentMatriz = document.querySelector(".contentMatriz")
+    if (contentMatriz) contentMatriz.style.height = "500px"
     contentMatriz.style.justifyContent = "center"
     OcultarMatrices()
     //Oculta el producto cruz

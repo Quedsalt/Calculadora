@@ -15,6 +15,8 @@ function llamarProductoCruz() {
     if (canvas) {
         canvas.style.display = "none"
     }
+    const contentMatriz = document.querySelector(".contentMatriz")
+    if (contentMatriz) contentMatriz.style.height = "500px"
 }
 
 function calcularProductoCruz() {
